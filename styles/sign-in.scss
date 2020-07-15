@@ -22,7 +22,6 @@
 
         &-top {
             grid-area: content-top;
-            margin-left: 20px;
             &__title {
                 @include text-title($black);
                 margin: 0 0 24px 0;
@@ -41,9 +40,9 @@
                 margin: 60px 0 32px 0;
                 @include text-regular(rgba($black, 0.4));
             }
-            &-social {
-                margin-left: 20px;
-                margin-right: 20px;
+            &-alt {
+
+                margin-bottom: 50px;
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
                 grid-template-rows: 1fr;
@@ -162,14 +161,11 @@
                     display: block;
                     width: 53.333vw;
                 }
-                
             }
-    
             &-top {
-              
+                margin-left: 20px;
                 &__title {
                     @include text-title--mobile;
-   
                 }
 
             }
@@ -177,6 +173,11 @@
             &-bottom {
                 &__text-secondary {
                     margin: 54px 0 32px 0;
+                }
+
+                &-alt {
+                    margin-left: 20px;
+                    margin-right: 20px;
                 }
             }
     

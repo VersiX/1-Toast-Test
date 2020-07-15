@@ -57,7 +57,6 @@
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: content-top;
-  margin-left: 20px;
 }
 
 .signin-content-top__title {
@@ -90,9 +89,8 @@
   color: rgba(0, 0, 0, 0.4);
 }
 
-.signin-content-bottom-social {
-  margin-left: 20px;
-  margin-right: 20px;
+.signin-content-bottom-alt {
+  margin-bottom: 50px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -103,7 +101,7 @@
       grid-template-areas: ". . .";
 }
 
-.signin-content-bottom-social__item {
+.signin-content-bottom-alt__item {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -268,12 +266,19 @@
     display: block;
     width: 53.333vw;
   }
+  .signin-content-top {
+    margin-left: 20px;
+  }
   .signin-content-top__title {
     font-size: 24px;
     line-height: 36px;
   }
   .signin-content-bottom__text-secondary {
     margin: 54px 0 32px 0;
+  }
+  .signin-content-bottom-alt {
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .form__title {
     margin-left: 20px;

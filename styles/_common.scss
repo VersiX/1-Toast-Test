@@ -1,0 +1,30 @@
+$yellow-dark: #F4A800;
+$yellow: #FFC31E;
+$white-bg: #F2F2F2;
+$white-text: #FFFFFF;
+$black-lighter: #070019;
+$black: #000000;
+
+@mixin text-regular($color) {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: $color;
+}
+
+@mixin text-title($color) {
+    font-family: "SF Pro Display";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 54px;
+    color: $color;
+    
+}
+
+@mixin text-title--mobile{
+    font-size: 24px;
+    line-height: 36px;
+}

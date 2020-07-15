@@ -1,0 +1,292 @@
+.signin {
+  max-width: 1400px;
+  margin: 200px auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.signin-content {
+  max-width: 1072px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 384px auto;
+      grid-template-columns: 384px auto;
+  -ms-grid-rows: minmax(74px, auto) auto;
+      grid-template-rows: minmax(74px, auto) auto;
+  gap: 32px 0;
+      grid-template-areas: "content-top pic" "content-bottom pic";
+}
+
+.signin-content__pic {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: pic;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.signin-content-top {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: content-top;
+  margin-left: 20px;
+}
+
+.signin-content-top__title {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 54px;
+  color: #000000;
+  margin: 0 0 24px 0;
+}
+
+.signin-content-top__subtitle {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #F4A800;
+}
+
+.signin-content-bottom__text-secondary {
+  text-align: center;
+  margin: 60px 0 32px 0;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.signin-content-bottom-social {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 0px 12px;
+      grid-template-areas: ". . .";
+}
+
+.signin-content-bottom-social__item {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  height: 32px;
+  border-radius: 4px;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#signin-apple {
+  background-color: black;
+}
+
+#signin-google {
+  background-color: #3F82F8;
+}
+
+#signin-facebook {
+  background-color: #4460A0;
+}
+
+.form__title {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  margin: 0 0 8px 0;
+}
+
+.form__input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.04);
+  margin: 7px 0 7px 0;
+  padding: 8px 0 8px 12px;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.form__input:focus {
+  background: rgba(6, 0, 25, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.form__input::-webkit-input-placeholder {
+  opacity: 0.2;
+}
+
+.form__input:-ms-input-placeholder {
+  opacity: 0.2;
+}
+
+.form__input::-ms-input-placeholder {
+  opacity: 0.2;
+}
+
+.form__input::placeholder {
+  opacity: 0.2;
+}
+
+.form-bottom {
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-bottom__link {
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #070019;
+  text-decoration: none;
+}
+
+.form-bottom__submit {
+  width: 127px;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #070019;
+  border: none;
+  border-radius: 4px;
+  font-family: "SF Pro Display";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+
+.form-bottom__submit:hover {
+  background-color: rgba(7, 0, 25, 0.8);
+}
+
+@media only screen and (max-width: 805px) {
+  .signin {
+    margin-top: 24px;
+    width: 100vw;
+  }
+  .signin-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    gap: 1px 1px;
+        grid-template-areas: "content-top" "pic" "content-bottom";
+  }
+  .signin-content__pic {
+    margin: 16px 0 36px 0;
+    min-height: 25px;
+    min-width: 1px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .signin-content__pic img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    display: block;
+    width: 53.333vw;
+  }
+  .signin-content-top__title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .signin-content-bottom__text-secondary {
+    margin: 54px 0 32px 0;
+  }
+  .form__title {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .form__input {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .form-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+  }
+  .form-bottom__link {
+    display: none;
+  }
+  .form-bottom__submit {
+    position: fixed;
+    bottom: 0;
+    display: none;
+    width: 100vw;
+    height: 52px;
+    border-radius: 0;
+    background-color: #FFC31E;
+    color: #070019;
+  }
+}
+/*# sourceMappingURL=sign-in.css.map */

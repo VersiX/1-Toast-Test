@@ -1,0 +1,223 @@
+@import 'common';
+
+.signin {
+    max-width: 1400px;
+    margin: 200px auto 0 auto;
+    display: flex;
+    justify-content: center;
+
+    &-content{
+        max-width: 1072px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 384px auto;
+        grid-template-rows: minmax(74px, auto) auto;
+        gap: 32px 0;//18.571%
+        grid-template-areas: "content-top pic" "content-bottom pic";
+        &__pic {
+            grid-area: pic;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &-top {
+            grid-area: content-top;
+            margin-left: 20px;
+            &__title {
+                @include text-title($black);
+                margin: 0 0 24px 0;
+            }
+
+            &__subtitle {
+                @include text-regular($yellow-dark);
+            }
+        }
+
+        &-bottom {
+           
+
+            &__text-secondary {
+                text-align: center;
+                margin: 60px 0 32px 0;
+                @include text-regular(rgba($black, 0.4));
+            }
+            &-social {
+                margin-left: 20px;
+                margin-right: 20px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr;
+                gap: 0px 12px;
+                grid-template-areas: ". . .";
+
+                &__item {
+                    user-select: none;
+                    cursor: pointer;
+                    height: 32px;
+                    border-radius: 4px;
+                    @include text-regular($white-text);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+#signin-apple {
+    background-color: black;
+}
+
+#signin-google {
+    background-color: #3F82F8;
+}
+
+#signin-facebook {
+    background-color: #4460A0;
+}
+
+
+.form {
+    &__title {
+        @include text-regular($black);
+        margin: 0 0 8px 0;
+    }
+    
+    &__input {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0);
+        border-radius: 4px;
+        background-color: rgba($black, 0.04);
+        margin: 7px 0 7px 0;
+        padding: 8px 0 8px 12px;
+        font-family: "SF Pro Display";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        &:focus {
+            background: rgba(6, 0, 25, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.6);
+        }
+
+        &::placeholder {
+            opacity: 0.2;
+        }
+    }
+
+    &-bottom {
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &__link {
+            @include text-regular($black-lighter);
+            text-decoration: none;
+        }
+    
+        &__submit {
+            width: 127px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: $black-lighter;
+            border: none;
+            border-radius: 4px;
+            @include text-regular($white-text);
+
+            &:hover {
+                background-color: rgba($black-lighter, 0.8);
+            }
+        }
+    }
+
+
+}
+
+
+@media only screen and (max-width: 805px) {
+
+
+    .signin {
+        margin-top: 24px;
+        width: 100vw;
+        &-content{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 1px 1px;
+            grid-template-areas: "content-top" "pic" "content-bottom";
+            &__pic {
+                margin: 16px 0 36px 0;
+                min-height: 25px;
+                min-width: 1px;
+                justify-content: center;
+                & img {
+                    object-fit: contain;
+                    display: block;
+                    width: 53.333vw;
+                }
+                
+            }
+    
+            &-top {
+              
+                &__title {
+                    @include text-title--mobile;
+   
+                }
+
+            }
+
+            &-bottom {
+                &__text-secondary {
+                    margin: 54px 0 32px 0;
+                }
+            }
+    
+        }
+    }
+
+
+
+
+
+
+
+    .form {
+        &__title {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        &__input {
+            width: calc(100% - 40px);
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    
+        &-bottom {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            &__link {
+                display: none;
+            }
+
+            &__submit {
+                position: fixed;
+                bottom: 0;
+                display: none;
+                width: 100vw;
+                height: 52px;
+                border-radius: 0;
+                background-color: $yellow;
+                color: $black-lighter;
+            }
+        }
+    }
+}

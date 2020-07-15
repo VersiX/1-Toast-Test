@@ -1,0 +1,192 @@
+@import 'common';
+
+.header {
+    margin: 0 auto 0 auto;
+    max-width: 1320px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-wrapper{
+        &-buttons{
+            display: none;
+        }
+    }
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    &-item {
+        position: relative;
+        &__link {
+            user-select: none;
+            cursor: pointer;
+            text-decoration: none;
+            padding: 8px 12px 8px 12px;
+            margin: 12px 8px 12px 8px;
+            border-radius: 4px;
+            @include text-regular($black-lighter);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &--active {
+                color: $yellow-dark;
+            }
+
+            &--highlighted {
+                background-color: $yellow;
+                &:hover {
+                    background-color: $yellow-dark !important;
+                }
+            }
+
+            & svg {
+                margin-right: 8px;
+            }
+
+            &:hover {
+                background-color: rgba($black, 0.04);
+            }
+        }
+        &-dropdown {
+            display: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            overflow-x: visible;
+            white-space: nowrap;
+            left: 0;
+            top: 100%;
+            list-style: none;
+            &-item {
+                &__link {
+                    display: block;
+                    text-decoration: none;
+                    @include text-regular($black);
+                    font-weight: 500;
+                    padding: 8px;
+                    border-radius: 4px;
+                    &:hover {
+                        background-color: rgba($black, 0.04);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+.logo {
+    padding: 4px 12px 4px 12px;
+
+    &:hover {
+        border-radius: 4px;
+        background-color: rgba($black, 0.04);
+    }
+}
+
+.vr-line {
+    height: 12px;
+    width: 1px;
+    margin-top: 22px;
+    background-color: $black-lighter;
+    border-radius: 1px;
+    opacity: 0.8;
+}
+
+@media only screen and (max-width: 805px) {
+    .header{
+        position: relative;
+        display: block;
+        &-wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-buttons{
+                display: block;
+                padding: 20px;
+            }
+        }
+        &-menu {
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            display: none;
+        }
+            
+    }
+
+
+    #header {
+        &-bars {
+
+        }
+
+        &-cross {
+            display: none;
+        }
+    }
+
+
+
+
+
+    .nav {
+        display: block;
+        &-item {
+            position: relative;
+            &__link {
+                margin: 0;
+                padding: 12px 0 12px 20px;
+                border-radius: 0;
+                justify-content: left;
+                @include text-title--mobile;
+                &--active {
+                    margin-bottom: 0;
+                    color: $black;
+                    background-color: $yellow;
+                    &:hover {
+                        background-color: $yellow;
+
+                    }
+                }
+                
+                &--pressed {
+                    color: rgba($black, 0.4);
+                }
+
+                &--highlighted {
+                    display: none;
+                }
+    
+                & svg {
+                   display: none;
+                }
+            }
+            &-dropdown {
+                position: relative;
+                &-item {
+                    &__link {
+                        font-family: "SF Pro Display";
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 24px;
+                        padding: 12px 0 12px 20px;
+
+
+                    }
+                }
+            }
+        }
+    }
+    .vr-line {
+        display: none;
+    }
+}
